@@ -1,0 +1,106 @@
+@import "_common.scss";
+/* 重置body */
+body{
+  padding: 90px 0 45px 0;
+}
+/* 头部 */
+.good-list-header{
+  height: 45px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 3px 12px;
+  .fa-refresh{
+    display: block;
+    width: 20px;
+    line-height: 45px;
+  }
+  .search{
+    flex: 1;
+    padding: 3px 6px;
+    input{
+      background: #fff;
+    }
+  }
+  .btn-search{
+    display: block;
+    width: 40px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+}
+/* 导航栏 */
+.good-list-nav{
+  height: 45px;
+  width: 100%;
+  position: fixed;
+  top: 45px;
+  left: 0;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+  .gl-select{
+    
+  }
+  .sales{
+   
+  }
+  .promotion{
+  }
+}
+/* 主体内容 */
+.pyg-views{
+  .good-list-main{
+    @include ul-reset;
+    li{
+      background: #fff;
+      margin: 6px;
+      a{
+        display: flex;
+        padding: 0 5px;
+        .gl-left{
+          flex: 1;
+          img{
+            width: 70%;
+            margin: 0 auto;
+          }
+        }
+        .gl-right{
+           flex: 1;
+           overflow: hidden;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           color: #8f8f94;
+           position: relative;
+           .gl-details{
+             font-size: 12px;
+             
+           }
+           .gl-price{
+             font-size: 14px;
+             color: #ff0000;
+           }
+           &::after{
+             content: "";
+             display: block;
+             width: 7px;
+             height: 7px;
+             border-top: 1px solid currentColor;
+             border-right: 1px solid currentColor;
+             position: absolute;
+             top: 50%;
+             right: 12px;
+             transform: rotate(45deg)
+           }
+        }
+      }
+    }
+  }
+}

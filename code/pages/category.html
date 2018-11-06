@@ -59,7 +59,7 @@
 <script type="text/template" id="categoryLeftTemp">
        {{each res val index}}
        {{if index==0}}
-        <li class="active" data-cat-id="{{val.cat_id}}">{{val.cat_name}}</li>
+        <li class="active">{{val.cat_name}}</li>
         {{else}}
         <li data-cat-id="{{val.cat_id}}">{{val.cat_name}}</li>
         {{/if}}
@@ -80,7 +80,7 @@
             <!-- 三级渲染 -->
              {{each val.children val2 index2}}
             <li>
-              <a href="javascript:;">
+              <a href="./good_list.html">
                 <img src="http://api.pyg.ak48.xyz/{{val2.cat_icon}}" alt="">
                 <span>{{val2.cat_name}}</span>
               </a>
