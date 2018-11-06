@@ -33,8 +33,12 @@ $(function () {
         // 调用模板方法
         var htmlStr = template("slideTemp",{res:res.data});
         $(".mui-slider").html(htmlStr);
-        /* 调用轮播图 */
-        pyg_slide();
+       
+        $(".mui-slider img").on("load",function () {
+          /* 调用轮播图 */
+          pyg_slide();
+          $("body").removeClass("loadding");  
+        })
         
       }
       

@@ -65,7 +65,20 @@ $(function () {
   /* 渲染右边内容的数据 */
   function rightRender(index) {
     var htmlStr2 = template("categoryRightTemp", { res: categoryData[index].children});
-    $(".category-right").html(htmlStr2);
+    $(".rigth-content").html(htmlStr2);
+    
+    // 标签回来之后不一定有高度 等最后一张图片加载完成即可
+    var num = $(".rigth-content img").length;
+    $(".rigth-content img").on("load",function () {
+      num--;
+      // 最后一张图片加载完成后 实例插件
+      if(num==0){
+        var rightScroll = new IScroll(".category-right");
+        $("body").removeClass("loadding");
+        
+      }
+    });
+    
   }
   
   

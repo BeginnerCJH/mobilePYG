@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./css/index.css">
 
 </head>
-<body>
+<body class="loadding">
   <!-- 头部 -->
   <header>
       <div class="mui-input-row mui-search">
@@ -78,7 +78,7 @@
       <div class="mui-slider-indicator">
          {{each res val index}}
          <!-- 判断 -->
-         {{if key==0}}
+         {{if index==0}}
         <div class="mui-indicator mui-active"></div>
         {{else}}
         <div class="mui-indicator"></div>

@@ -72,14 +72,14 @@ footer{
   }
   &::after {
     font: normal normal normal 14px/1 FontAwesome;
+    font-size: 60px;
+    content: "\f110";
+    z-index: 101;
+    animation: fa-spin 1s infinite linear;
     position: fixed;
     top: 40%;
     left: 50%;
-    margin-left: -50px;
-    font-size: 100px;
-    color: #0094ff;
-    content: "\f013";
-    z-index: 101;
-    animation: fa-spin 1s infinite linear;
+    margin-left: -30px;
+   
   }
 }

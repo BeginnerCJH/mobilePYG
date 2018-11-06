@@ -15,6 +15,7 @@ img {
 }
 
 /* 封装重置ul的样式 */
+/* 头部 */
 header {
   height: 45px;
   position: fixed;
@@ -25,11 +26,13 @@ header {
   padding: 5px 10px;
 }
 
+/* 主体 */
 .pyg-views {
   height: 100%;
   overflow: scroll;
 }
 
+/* 底部 */
 footer {
   height: 45px;
   position: fixed;
@@ -58,6 +61,32 @@ footer a div {
 
 footer a .fa {
   font-size: 20px;
+}
+
+/* 正在等待的样式 */
+.loadding::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: .5;
+  content: "";
+  z-index: 100;
+}
+
+.loadding::after {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 60px;
+  content: "\f110";
+  z-index: 101;
+  -webkit-animation: fa-spin 1s infinite linear;
+          animation: fa-spin 1s infinite linear;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -30px;
 }
 
 /*  */
@@ -97,7 +126,7 @@ footer a .fa {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  overflow: scroll;
+  overflow: hidden;
   background: #fff;
   padding: 0 .12rem;
 }

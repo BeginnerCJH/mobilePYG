@@ -26,7 +26,7 @@
 /* 右边 */
 .category-right{
   flex: 1;
-  overflow: scroll;
+  overflow: hidden;
   background: #fff;
   padding: 0 .12rem;
   .category-title{
