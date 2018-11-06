@@ -2,7 +2,6 @@ $(function () {
   init();
   function init() {
     setApi();
-    waiting();
     
   }
   /* 存储公共的api */
@@ -13,25 +12,18 @@ $(function () {
    $.ajaxSettings.beforeSend = function (xhr, obj) {
      obj.url = baseUrl + obj.url;
 
+     /*显示正在等待 */
+     $("body").addClass("loadding");
+
+   }
+
+   $.ajaxSettings.complete = function () {
+      /*隐藏正在等待 */
+     $("body").removeClass("loadding");
    }
    
  }
- /* 正在等待 */
-  function waiting() {
-    //当页面加载状态改变的时候执行这个方法
-    document.onreadystatechange=function () {
-      //当页面加载状态为完全结束时进入
-      if (document.readyState =="complete"){
-        //当页面加载完成后将loading页隐藏
-        // $("body").removeClass("loadding");  
-      }
-      
-    }
-  //  window.onload=function () {
-  //    
-  //  }
-    
- }
+
 
 })
  

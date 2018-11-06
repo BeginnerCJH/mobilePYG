@@ -89,6 +89,11 @@ footer a .fa {
   margin-left: -30px;
 }
 
+/* 选中按钮的颜色 */
+.mui-text-primary {
+  color: #007aff;
+}
+
 /* 主要内容 */
 .pyg-views {
   /* 轮播图选择器重置样式 */

@@ -34,11 +34,11 @@ $(function () {
         var htmlStr = template("slideTemp",{res:res.data});
         $(".mui-slider").html(htmlStr);
        
-        $(".mui-slider img").on("load",function () {
-          /* 调用轮播图 */
-          pyg_slide();
-          $("body").removeClass("loadding");  
-        })
+        // $(".mui-slider img").on("load",function () {
+        //   /* 调用轮播图 */
+        //   pyg_slide();
+        //   $("body").removeClass("loadding");  
+        // })
         
       }
       

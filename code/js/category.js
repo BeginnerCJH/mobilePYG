@@ -6,7 +6,8 @@ $(function () {
   var leftScroll;
   function init() {
   /* 默认页面渲染数据 */
-    getCategories();
+    // getCategories();
+    catesRender();
     setScrren();
     /* 注册事件的调用 */
     eventList();
@@ -41,19 +42,47 @@ $(function () {
     });
     
   }
+  /* 渲染页面的数据  一种是直接请求服务器 另一种是从本地缓存中找 */
+  // 如果有本地缓存 再判断是否过期
+  function catesRender() {
+    // 获取本地缓存的数据
+    var cateDataStr=localStorage.getItem("cates");
+    // 判断是否存在本地缓存---不存在--直接到服务器请求数据
+    if (!cateDataStr){
+      getCategories();
+    }else{
+      // 数据存在后 把数据转为对象
+      var cateDataObj = JSON.parse(cateDataStr);
+      console.log(cateDataObj);
+      
+      // 判断时间是否过期 10s
+      if (Date.now() - cateDataObj.time>10000){
+        getCategories();
+      }else{
+        categoryData = cateDataObj.data;
+        leftRender();
+        rightRender(0);
+      }
+    }
+    
+  }
 
   /* 请求分类数据 */
   function getCategories() {
     $.get("categories",function (res) {
-      /* 把数据存储到全局变量中 */
-      categoryData =res.data;
+     
       // console.log(res);
       if (res.meta.status==200){
-        // 调用模板方法---左边菜单栏
-        var htmlStr = template("categoryLeftTemp", { res: categoryData});
-        $(".category_menu").html(htmlStr);
-        /* 实例化左边滚动条插件 */
-        leftScroll = new IScroll('.category-left');
+        /* 把数据存储到全局变量中 */
+        categoryData = res.data;
+        /* 把请求回来的数据存储到本地缓存中 再存储本地存储的时间 */
+        localStorage.setItem("cates", JSON.stringify({ 
+          time: Date.now(), 
+          data: categoryData
+        })
+        );
+        /* 渲染左边内容的数据 */
+        leftRender();
         /* 渲染右边内容的数据 */
         rightRender(0);
       }
@@ -61,7 +90,14 @@ $(function () {
     })
     
   }
-
+  /* 渲染左边内容的数据 */
+  function leftRender() {
+    // 调用模板方法---左边菜单栏
+    var htmlStr = template("categoryLeftTemp", { res: categoryData });
+    $(".category_menu").html(htmlStr);
+    /* 实例化左边滚动条插件 */
+    leftScroll = new IScroll('.category-left');
+  }
   /* 渲染右边内容的数据 */
   function rightRender(index) {
     var htmlStr2 = template("categoryRightTemp", { res: categoryData[index].children});
@@ -74,7 +110,7 @@ $(function () {
       // 最后一张图片加载完成后 实例插件
       if(num==0){
         var rightScroll = new IScroll(".category-right");
-        $("body").removeClass("loadding");
+        // $("body").removeClass("loadding");
         
       }
     });
