@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>分页之手高眼低的高薪</title>
+  <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/category.css">
+
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header>
+    <div class="mui-input-row mui-search">
+      <input type="search" class="mui-input-clear" placeholder="">
+    </div>
+  </header>
+
+  <!-- 主体内容 -->
+  <div class="pyg-views">
+    <div class="category-left">
+      <ul class="category_menu">
+    
+    </ul>
+    </div>
+    <div class="category-right">
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <footer>
+    <a href="../index.html">
+      <div class="fa fa-home"></div>
+      <div>首页</div>
+    </a>
+    <a href="./pages/category.html">
+      <div class="fa fa-list-ul"></div>
+      <div>分类</div>
+    </a>
+    <a href="javascript:;">
+      <div class="fa fa-shopping-cart"></div>
+      <div>购物车</div>
+    </a>
+    <a href="javascript:;">
+      <div class="fa fa-user-circle-o"></div>
+      <div>我的</div>
+    </a>
+  </footer>
+</body>
+
+<!-- 一级渲染的模板 -->
+<script type="text/template" id="categoryLeftTemp">
+       {{each res val index}}
+       {{if index==0}}
+        <li class="active" data-cat-id="{{val.cat_id}}">{{val.cat_name}}</li>
+        {{else}}
+        <li data-cat-id="{{val.cat_id}}">{{val.cat_name}}</li>
+        {{/if}}
+       {{/each}}
+</script>
+
+<!-- 二级渲染模板 -->
+<script type="text/template" id="categoryRightTemp">
+   <!-- 二级渲染 -->
+       {{each res val index}}
+      <div class="rende-second">
+         
+          <div class="category-title">
+            <span>{{val.cat_name}}</span>
+          </div>
+          <ul class="category-content">
+            <!-- 三级渲染 -->
+             {{each val.children val2 index2}}
+            <li>
+              <a href="javascript:;">
+                <img src="http://api.pyg.ak48.xyz/{{val2.cat_icon}}" alt="">
+                <span>{{val2.cat_name}}</span>
+              </a>
+            </li>
+            {{/each}}
+      </div>
+      {{/each}}
+
+  
+</script>
+
+
+
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/category.js"></script>
+
+</html>

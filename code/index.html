@@ -4,9 +4,134 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>痴心妄想的月薪</title>
+  <title>首页之痴心妄想的高薪</title>
+  <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+
 </head>
 <body>
-  
+  <!-- 头部 -->
+  <header>
+      <div class="mui-input-row mui-search">
+        <input type="search" class="mui-input-clear" placeholder="">
+      </div>
+  </header>
+
+  <!-- 主题内容 -->
+ <div class="pyg-views">
+    <!-- 轮播图 start-->
+    <div class="mui-slider">
+      
+    </div>
+    <!-- 轮播图 end -->
+
+    <!-- 首页导航 start -->
+    <div class="pyg-nav">
+
+    </div>
+    <!-- 首页导航 end -->
+
+    <!-- 首页商品列表 -->
+    <div class="commodity-list">
+      
+    </div>
+
+
+ </div>
+
+ <!-- 底部 -->
+ <footer>
+   <a href="./index.html">
+     <div class="fa fa-home"></div>
+     <div>首页</div>
+   </a>
+    <a href="/pages/category.html">
+      <div class="fa fa-list-ul"></div>
+      <div>分类</div>
+    </a>
+    <a href="javascript:;">
+      <div class="fa fa-shopping-cart"></div>
+      <div>购物车</div>
+    </a>
+    <a href="javascript:;">
+      <div class="fa fa-user-circle-o"></div>
+      <div>我的</div>
+    </a>
+ </footer>
 </body>
+<!-- 轮播图模板 -->
+<script type="text/template" id="slideTemp">
+ 
+    <!-- 图片 -->
+      <div class="mui-slider-group mui-slider-loop">
+        
+        <!--支持循环，需要重复图片节点-->
+        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{res[res.length-1].image_src}}" /></a></div>
+         {{each res val index}}
+        <div class="mui-slider-item"><a href="#"><img src="{{val.image_src}}" /></a></div>
+        {{/each}}
+        <!--支持循环，需要重复图片节点-->
+        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{res[0].image_src}}" /></a></div>
+      </div>
+      <!-- 选择器 -->
+      <div class="mui-slider-indicator">
+         {{each res val index}}
+         <!-- 判断 -->
+         {{if key==0}}
+        <div class="mui-indicator mui-active"></div>
+        {{else}}
+        <div class="mui-indicator"></div>
+        {{/if}}
+        {{/each}}
+      </div>
+  
+</script>
+
+<!-- 首页导航模板 -->
+<script type="text/template" id="catTemp">
+  {{each res val index}}
+    <a href="javascript:;"><img src="{{val.image_src}}" alt=""></a>
+  {{/each}}
+</script>
+
+<!-- 首页商品列表模板 -->
+<script type="text/template" id="goodsListTemp">
+  {{each res val index1}}
+    <!-- 商品列表的主体 -->
+      <div class="commodity-main">
+        <!-- 商品标题 -->
+        <div class="commodity-title">
+          <img src="{{val.group_img}}" alt="">
+        </div>
+        <!-- 商品内容 -->
+        <ul class="commodity-content">
+          {{each val.goods val2 index2}}
+          <li>
+            <!-- 商品详情 -->
+            <a class="commodity-details" href="javascript:;">
+              <!-- 商品图片 -->
+              <img src="{{val2.goods_small_logo}}" alt="">
+              <!-- 商品描述 -->
+              <div class="commodity-describe">
+                {{val2.goods_name}}
+              </div>
+              <!-- 商品价格 -->
+              <div class="commodity-price">￥{{val2.goods_price}}</div>
+            </a>
+            <!-- 找相似 -->
+            <a class="commodity-like mui-btn mui-btn-primary mui-btn-outlined" data-loading-text="查找中" href="javascript:;">找相似</a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+  {{/each}}
+</script>
+
+
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/arttemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
 </html>

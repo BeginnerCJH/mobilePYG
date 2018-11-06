@@ -1,0 +1,75 @@
+/* 导入公共样式 */
+@import "_common.scss";
+/*  */
+.pyg-views{
+  overflow: hidden;
+  display: flex;
+}
+/* 左边 */
+.category-left{
+  overflow: hidden;
+  width: 0.8rem;
+  .category_menu{
+    @include ul-reset();
+    li{
+      text-align: center;
+      line-height: .4rem;
+      height: .4rem;
+      font-size: .14rem;
+    }
+    .active{
+      background: #fff;
+      border-left: 3px solid blue;
+    }
+  }
+}
+/* 右边 */
+.category-right{
+  flex: 1;
+  overflow: scroll;
+  background: #fff;
+  padding: 0 .12rem;
+  .category-title{
+    height: .4rem;
+    line-height: .4rem;
+    font-size: .12rem;
+    color: blue;
+    span{
+      position: relative;
+      &::before{
+        content: "";
+        display: block;
+        width: 1.8rem;
+        height: 0.01rem;
+        background: #000;
+        position: absolute;
+        top: .06rem;
+        left: .6rem;
+      }
+    }
+    
+  }
+  .category-content{
+    display: flex;
+    flex-wrap: wrap;
+    @include ul-reset();
+    li{
+      width: 33.33%;
+      text-align: center;
+      padding-bottom: .01rem;
+      a{
+        img{
+        width: 70%;
+        margin: 0 auto;
+      }
+      span{
+        font-size: .12rem;
+        color: #000000;
+        display: block;
+        padding-top: .01rem;
+        }
+      }
+    }
+  }
+
+}

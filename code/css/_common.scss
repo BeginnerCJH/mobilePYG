@@ -1,0 +1,85 @@
+/* 公共样式 */
+html,body{
+  height: 100%;
+}
+body{
+  padding: 45px 0px;
+}
+img {
+  display: block;
+  width: 100%;
+}
+/* 封装重置ul的样式 */
+@mixin ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* 头部 */
+header{
+  height: 45px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 5px 10px;
+  
+}
+/* 主体 */
+.pyg-views{
+  height: 100%;
+  overflow: scroll;
+}
+/* 底部 */
+footer{
+  height: 45px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background: #fff;
+  justify-content: space-around;
+  padding: 5px 0;
+  border-top: 1px solid #ccc;
+  a{
+    color: #000000;
+    display: block;
+    text-align: center;
+    div{
+      font-size: 12px;
+    }
+    .fa{
+      font-size: 20px;
+    }
+    
+  }
+}
+
+/* 正在等待的样式 */
+.loadding {
+  &::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: .5;
+    content: "";
+    z-index: 100;
+  }
+  &::after {
+    font: normal normal normal 14px/1 FontAwesome;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    margin-left: -50px;
+    font-size: 100px;
+    color: #0094ff;
+    content: "\f013";
+    z-index: 101;
+    animation: fa-spin 1s infinite linear;
+  }
+}

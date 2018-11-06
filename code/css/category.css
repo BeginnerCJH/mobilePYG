@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/* 导入公共样式 */
+/* 公共样式 */
+html, body {
+  height: 100%;
+}
+
+body {
+  padding: 45px 0px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 封装重置ul的样式 */
+header {
+  height: 45px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 5px 10px;
+}
+
+.pyg-views {
+  height: 100%;
+  overflow: scroll;
+}
+
+footer {
+  height: 45px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px 0;
+  border-top: 1px solid #ccc;
+}
+
+footer a {
+  color: #000000;
+  display: block;
+  text-align: center;
+}
+
+footer a div {
+  font-size: 12px;
+}
+
+footer a .fa {
+  font-size: 20px;
+}
+
+/*  */
+.pyg-views {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* 左边 */
+.category-left {
+  overflow: hidden;
+  width: 0.8rem;
+}
+
+.category-left .category_menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category-left .category_menu li {
+  text-align: center;
+  line-height: .4rem;
+  height: .4rem;
+  font-size: .14rem;
+}
+
+.category-left .category_menu .active {
+  background: #fff;
+  border-left: 3px solid blue;
+}
+
+/* 右边 */
+.category-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: scroll;
+  background: #fff;
+  padding: 0 .12rem;
+}
+
+.category-right .category-title {
+  height: .4rem;
+  line-height: .4rem;
+  font-size: .12rem;
+  color: blue;
+}
+
+.category-right .category-title span {
+  position: relative;
+}
+
+.category-right .category-title span::before {
+  content: "";
+  display: block;
+  width: 1.8rem;
+  height: 0.01rem;
+  background: #000;
+  position: absolute;
+  top: .06rem;
+  left: .6rem;
+}
+
+.category-right .category-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category-right .category-content li {
+  width: 33.33%;
+  text-align: center;
+  padding-bottom: .01rem;
+}
+
+.category-right .category-content li a img {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.category-right .category-content li a span {
+  font-size: .12rem;
+  color: #000000;
+  display: block;
+  padding-top: .01rem;
+}
+/*# sourceMappingURL=category.css.map */

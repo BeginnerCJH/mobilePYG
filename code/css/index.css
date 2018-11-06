@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* 导入公共样式 */
+/* 公共样式 */
+html, body {
+  height: 100%;
+}
+
+body {
+  padding: 45px 0px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 封装重置ul的样式 */
+header {
+  height: 45px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 5px 10px;
+}
+
+.pyg-views {
+  height: 100%;
+  overflow: scroll;
+}
+
+footer {
+  height: 45px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px 0;
+  border-top: 1px solid #ccc;
+}
+
+footer a {
+  color: #000000;
+  display: block;
+  text-align: center;
+}
+
+footer a div {
+  font-size: 12px;
+}
+
+footer a .fa {
+  font-size: 20px;
+}
+
+/* 主要内容 */
+.pyg-views {
+  /* 轮播图选择器重置样式 */
+  /* 首页导航 */
+  /* 首页商品列表 */
+}
+
+.pyg-views .mui-slider .mui-slider-indicator {
+  /* 重置选择器样式 */
+}
+
+.pyg-views .mui-slider .mui-slider-indicator .mui-indicator {
+  background: transparent;
+  width: 9px;
+  height: 9px;
+  border: 1px solid #ffffff;
+}
+
+.pyg-views .mui-slider .mui-slider-indicator .mui-active {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 1px 4px rgba(255, 255, 255, 0.3);
+          box-shadow: 0 0 1px 4px rgba(255, 255, 255, 0.3);
+}
+
+.pyg-views .pyg-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg-views .pyg-nav a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 12px;
+}
+
+.pyg-views .pyg-nav a img {
+  width: 90%;
+}
+
+.pyg-views .commodity-list {
+  /* 商品列表的主体 */
+}
+
+.pyg-views .commodity-list .commodity-main {
+  padding: 5px 10px;
+  /* 商品标题 */
+  /*商品内容  */
+}
+
+.pyg-views .commodity-list .commodity-main .commodity-content {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 5px;
+}
+
+.pyg-views .commodity-list .commodity-main .commodity-content li {
+  width: 49%;
+  padding: 5px;
+  background: #fff;
+  margin-top: 5px;
+  /* 商品详情 */
+  /* 找相似 */
+}
+
+.pyg-views .commodity-list .commodity-main .commodity-content li .commodity-details {
+  display: block;
+  /* 商品描述 */
+}
+
+.pyg-views .commodity-list .commodity-main .commodity-content li .commodity-details .commodity-describe {
+  font-size: 12px;
+  color: #000000;
+  height: 42px;
+  overflow: hidden;
+}
+
+.pyg-views .commodity-list .commodity-main .commodity-content li .commodity-details .commodity-price {
+  font-size: 18px;
+  color: red;
+  height: 32px;
+  line-height: 32px;
+}
+
+.pyg-views .commodity-list .commodity-main .commodity-content li .commodity-like {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=index.css.map */
