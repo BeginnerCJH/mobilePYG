@@ -1,0 +1,88 @@
+@import "_common.scss";
+// 头部
+.good-detail-header{
+  height: 45px;
+}
+// 主题内容
+.pyg-views{
+  background: #fff;
+  // 轮播图
+   /* 轮播图选择器重置样式 */
+  .mui-slider{
+    .mui-slider-indicator{
+      /* 重置选择器样式 */
+      .mui-indicator{
+        // background: #ffffff;
+        width: 9px;
+        height: 9px;
+        border: 1px solid #ffffff;
+      }
+      .mui-active{
+        background: aqua;
+        box-shadow: 0 0 1px 4px rgba(255, 255, 255, .3);
+      }
+    }
+  }
+
+  // 商品标题描述
+  .goods-name{
+    padding: 5px;
+    text-indent: 1em;
+  }
+  // 商品价格
+  .goods-price{
+    color: #ffa500;
+    padding: 5px;
+    font-size: 24px;
+  }
+
+  // 商品配送
+  .goods-dispatching{
+    .ul-dispatching{
+      @include ul-reset;
+      padding: 5px;
+      li{
+        font-size: 12px;
+        border-bottom: 1px solid #ccc;
+        line-height: 40px;
+        span{
+          &:first-child{
+            color: #dbd0cc;
+            padding-right: 100px;
+          }
+          &:last-child{
+            color: #666666;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 底部 */
+footer{
+  display: flex;
+  padding: 0;
+  a{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-right: 1px solid #ccc;
+    font-size: 12px;
+    color: #fff;
+    span{
+      color: #666666;
+      font-size: 16px;
+      &:last-child{
+        font-size: 12px;
+      }
+    }
+    &:nth-child(3){
+      background: #ffaa00;
+    }
+    &:nth-child(4){
+      background: #ff6600;
+    }
+  }
+}

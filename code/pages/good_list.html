@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>商品详情页之好高骛远的高薪</title>
+  <title>商品列表之好高骛远的高薪</title>
   <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
   <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/good_list.css">
@@ -35,10 +35,15 @@
   </div>
 
   <!-- 主体内容 -->
+  <!-- pyg-views为下拉-上拉的容器 里面必须加一层嵌套 div -->
   <div class="pyg-views">
-    <ul class="good-list-main">
-     
-    </ul>
+   <!-- 2 div 为额外添加的嵌套 -->
+    <div>
+      <!-- //3 .lt_content 为存放数据的容器 -->
+      <ul class="good-list-main">
+      
+      </ul>
+    </div>
   </div>
 
   <!-- 底部 -->
@@ -66,7 +71,7 @@
 <script type="text/template" id="searchTemp">
   {{each res val index}}
      <li>
-        <a href="javascript:;">
+        <a href="./goods_detail.html?goods_id={{val.goods_id}}">
           <div class="gl-left">
             <img src="{{val.goods_small_logo}}" alt="">
           </div>
@@ -89,6 +94,7 @@
 <script src="../lib/zepto/zepto.js"></script>
 <script src="../lib/arttemplate/template-web.js"></script>
 <script src="../lib/iscroll/iscroll.js"></script>
+<script src="../lib/utils/utils.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/good_list.js"></script>
 

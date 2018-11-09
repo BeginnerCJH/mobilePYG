@@ -84,6 +84,7 @@ footer a .fa {
   -webkit-animation: fa-spin 1s infinite linear;
           animation: fa-spin 1s infinite linear;
   position: fixed;
+  color: pink;
   top: 40%;
   left: 50%;
   margin-left: -30px;

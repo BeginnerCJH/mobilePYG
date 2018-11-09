@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>商品详情页之遥遥无期的高薪</title>
+  <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/goods_detail.css">
+
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div class="good-detail-header mui-bar mui-bar-nav">
+        <h1 class="mui-title">商品详情</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  </div>
+  
+
+  <!-- 主体内容 -->
+  <div class="pyg-views">
+   
+     
+   
+  </div>
+
+  <!-- 底部 -->
+  <footer>
+    <a href="javascript:;">
+      <span class="mui-icon mui-icon-chatbubble"></span>
+      <span>客服</span>
+    </a>
+    <a href="javascript:;">
+      <span class="mui-icon mui-icon-download"></span>
+      <span>下载</span>
+    </a>
+    <a href="javascript:;">立即购买</a>
+    <a href="javascript:;">加入购物车</a>
+  </footer>
+
+</body>
+<!-- 模板 -->
+<script type="text/template" id="gdetailTemp">
+   <!-- 轮播图 -->
+  <div class="gd-slide mui-slider">
+   <!-- 图片 -->
+      <div class="mui-slider-group mui-slider-loop">
+        <!--支持循环，需要重复图片节点-->
+        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{res.pics[res.pics.length-1].pics_mid_url}}"/></a></div>
+        {{each res.pics val1 index1}}
+        <div class="mui-slider-item"><a href="#"><img src="{{val1.pics_mid_url}}" /></a></div>
+        {{/each}}
+        <!--支持循环，需要重复图片节点-->
+        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{res.pics[0].pics_mid_url}}" /></a></div>
+      </div>
+      <!-- 选择器 -->
+      <div class="mui-slider-indicator">
+      {{each res.pics val1 index1}}
+      {{if index1==0}}
+        <div class="mui-indicator mui-active"></div>
+        {{else}}
+        <div class="mui-indicator"></div>
+        {{/if}}
+      {{/each}}
+      </div>
+    </div>
+
+    <!-- 商品标题描述 -->
+    <div class="goods-name">
+      {{res.goods_name}}
+    </div>
+    <!-- 商品价格 -->
+    <div class="goods-price">
+      ￥{{res.goods_price}}
+    </div>
+    <!-- 商品配送 -->
+    <div class="goods-dispatching">
+        <ul class="ul-dispatching">
+          <li>
+            <span>已选</span>
+            <span>白色</span>
+          </li>
+          <li>
+            <span>促销</span>
+            <span>是</span>
+          </li>
+          <li>
+            <span>送至</span>
+            <span>北凉道</span>
+          </li>
+          <li>
+            <span>运费</span>
+            <span>免运费</span>
+          </li>
+        </ul>
+    </div>
+
+    <!-- 商品选项卡 -->
+    <div class="goods_tab">
+      <div style="padding: 10px 10px;">
+				<div id="segmentedControl" class="mui-segmented-control">
+					<a class="mui-control-item mui-active" href="#item1">
+				图文详情
+			</a>
+					<a class="mui-control-item" href="#item2">
+				规格参数
+			</a>
+					
+				</div>
+      </div>
+      <div>
+        <!-- 图文详情 -->
+        <div id="item1" class="mui-control-content mui-active">
+					{{@res.goods_introduce}}
+        </div>
+        <!-- 规格参数-->
+         <div id="item2" class="mui-control-content">
+          {{each res.attrs val2 index2}}
+            <div class="zhuti">
+              {{val2.attr_name}}
+            </div>
+            <div class="guige">
+              {{val2.attr_value}}
+            </div>
+          {{/each}}
+				</div>
+      </div>
+    </div>
+</script>
+
+
+
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../lib/utils/utils.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/goods_detail.js"></script>
+
+</html>

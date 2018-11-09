@@ -83,8 +83,9 @@ $(function () {
   }
 
   /* 点击跳转页面 */
-  $("footer a:nth-child(2)").on("click", function () {
-    location.href = "./pages/category.html";
+  $("footer a:nth-child(2)").on("tap", function () {
+    var href=this.href;
+    location.href = href;
 
   })
 

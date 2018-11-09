@@ -96,14 +96,14 @@ $(function () {
   function leftRender() {
     // 调用模板方法---左边菜单栏
     var htmlStr = template("categoryLeftTemp", { res: categoryData });
-    $(".category_menu").html(htmlStr).hide().fadeIn(1000);
+    $(".category_menu").html(htmlStr).hide().fadeIn(2000);
     /* 实例化左边滚动条插件 */
     leftScroll = new IScroll('.category-left');
   }
   /* 渲染右边内容的数据 */
   function rightRender(index) {
     var htmlStr2 = template("categoryRightTemp", { res: categoryData[index].children});
-    $(".rigth-content").html(htmlStr2).hide().fadeIn(1000);
+    $(".rigth-content").html(htmlStr2).hide().fadeIn(2000);
     
     // 标签回来之后不一定有高度 等最后一张图片加载完成即可
     var num = $(".rigth-content img").length;

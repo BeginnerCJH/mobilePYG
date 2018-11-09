@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* 导入公共样式 */
 /* 公共样式 */
 html, body {
   height: 100%;
@@ -95,11 +94,13 @@ footer a .fa {
   color: #007aff;
 }
 
-/* 主要内容 */
+.good-detail-header {
+  height: 45px;
+}
+
 .pyg-views {
+  background: #fff;
   /* 轮播图选择器重置样式 */
-  /* 首页导航 */
-  /* 首页商品列表 */
 }
 
 .pyg-views .mui-slider .mui-slider-indicator {
@@ -107,91 +108,90 @@ footer a .fa {
 }
 
 .pyg-views .mui-slider .mui-slider-indicator .mui-indicator {
-  background: transparent;
   width: 9px;
   height: 9px;
   border: 1px solid #ffffff;
 }
 
 .pyg-views .mui-slider .mui-slider-indicator .mui-active {
-  background: #ffffff;
+  background: aqua;
   -webkit-box-shadow: 0 0 1px 4px rgba(255, 255, 255, 0.3);
           box-shadow: 0 0 1px 4px rgba(255, 255, 255, 0.3);
 }
 
-.pyg-views .pyg-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.pyg-views .goods-name {
+  padding: 5px;
+  text-indent: 1em;
 }
 
-.pyg-views .pyg-nav a {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 12px;
+.pyg-views .goods-price {
+  color: #ffa500;
+  padding: 5px;
+  font-size: 24px;
 }
 
-.pyg-views .pyg-nav a img {
-  width: 90%;
-}
-
-.pyg-views .commodity-list {
-  /* 商品列表的主体 */
-}
-
-.pyg-views .commodity-list .commodity-main {
-  padding: 5px 10px;
-  /* 商品标题 */
-  /*商品内容  */
-}
-
-.pyg-views .commodity-list .commodity-main .commodity-content {
+.pyg-views .goods-dispatching .ul-dispatching {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding: 5px;
+}
+
+.pyg-views .goods-dispatching .ul-dispatching li {
+  font-size: 12px;
+  border-bottom: 1px solid #ccc;
+  line-height: 40px;
+}
+
+.pyg-views .goods-dispatching .ul-dispatching li span:first-child {
+  color: #dbd0cc;
+  padding-right: 100px;
+}
+
+.pyg-views .goods-dispatching .ul-dispatching li span:last-child {
+  color: #666666;
+}
+
+/* 底部 */
+footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 5px;
+  padding: 0;
 }
 
-.pyg-views .commodity-list .commodity-main .commodity-content li {
-  width: 49%;
-  padding: 5px;
-  background: #fff;
-  margin-top: 5px;
-  /* 商品详情 */
-  /* 找相似 */
-}
-
-.pyg-views .commodity-list .commodity-main .commodity-content li .commodity-details {
-  display: block;
-  /* 商品描述 */
-}
-
-.pyg-views .commodity-list .commodity-main .commodity-content li .commodity-details .commodity-describe {
+footer a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-right: 1px solid #ccc;
   font-size: 12px;
-  color: #000000;
-  height: 42px;
-  overflow: hidden;
+  color: #fff;
 }
 
-.pyg-views .commodity-list .commodity-main .commodity-content li .commodity-details .commodity-price {
-  font-size: 18px;
-  color: red;
-  height: 32px;
-  line-height: 32px;
+footer a span {
+  color: #666666;
+  font-size: 16px;
 }
 
-.pyg-views .commodity-list .commodity-main .commodity-content li .commodity-like {
-  display: block;
-  width: 120px;
-  margin: 0 auto;
+footer a span:last-child {
+  font-size: 12px;
 }
-/*# sourceMappingURL=index.css.map */
+
+footer a:nth-child(3) {
+  background: #ffaa00;
+}
+
+footer a:nth-child(4) {
+  background: #ff6600;
+}
+/*# sourceMappingURL=goods_detail.css.map */

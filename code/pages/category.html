@@ -80,8 +80,8 @@
             <!-- 三级渲染 -->
              {{each val.children val2 index2}}
             <li>
-              <a href="./good_list.html">
-                <img src="http://api.pyg.ak48.xyz/{{val2.cat_icon}}" alt="">
+              <a href="./good_list.html?cid={{val2.cat_id}}">
+                <img src="{{$imports.imgUrl}}{{val2.cat_icon}}" alt="">
                 <span>{{val2.cat_name}}</span>
               </a>
             </li>
