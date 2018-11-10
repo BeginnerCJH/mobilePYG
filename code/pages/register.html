@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>注册之想入非非的高薪</title>
+  <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/register.css">
+
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div class="register-header mui-bar mui-bar-nav">
+    <h1 class="mui-title">注册</h1>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  </div>
+
+
+  <!-- 主体内容 -->
+  <div class="pyg-views">
+    <div class="logo">
+      <span>已有账号？请<a class="primary" href="./login.html">登录</a></span>
+    </div>
+  
+    <form class="mui-input-group">
+      <div class="mui-input-row">
+        <label>手机号</label>
+        <input type="text" name="mobile" class="mui-input-clear" value="13760811080" placeholder="请输入手机号">
+      </div>
+
+      <div class="mui-input-row form-code">
+        <label>验证码</label>
+        <input type="text" name="code" placeholder="4位验证码">
+        <button id="btn-code" type="button" class="mui-btn mui-btn-primary" >获取验证码</button>
+      </div>
+
+      <div class="mui-input-row">
+        <label>邮箱</label>
+        <input type="text" name="email" class="mui-input-clear" placeholder="请输入邮箱号">
+      </div>
+
+      <div class="mui-input-row">
+        <label>密码</label>
+        <input type="password" name="pwd" class="mui-input-password" placeholder="请输入密码">
+      </div>
+
+      <div class="mui-input-row">
+        <label>确认密码</label>
+        <input type="password" name="pwd2" class="mui-input-password" placeholder="请再次输入密码">
+      </div>
+
+      <div class="mui-input-row mui-radio mui-right">
+        <label>男</label>
+        <input name="gender" checked type="radio" value="男">
+      </div>
+
+      <div class="mui-input-row mui-radio mui-right">
+        <label>女</label>
+        <input name="gender" type="radio" value="女">
+      </div>
+    </form>
+    <div class="btn">
+      <a id="btn-register" class="mui-btn mui-btn-primary" href="javascript:;">注册</a>
+    </div>
+
+  </div>
+
+  <!-- 底部 -->
+  <footer>
+    <a href="../index.html">
+      <div class="fa fa-home"></div>
+      <div>首页</div>
+    </a>
+    <a href="./category.html">
+      <div class="fa fa-list-ul"></div>
+      <div>分类</div>
+    </a>
+    <a href="javascript:;">
+      <div class="fa fa-shopping-cart"></div>
+      <div>购物车</div>
+    </a>
+    <a href="javascript:;">
+      <div class="fa fa-user-circle-o"></div>
+      <div>我的</div>
+    </a>
+  </footer>
+
+</body>
+
+
+
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/register.js"></script>
+
+</html>

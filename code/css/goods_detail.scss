@@ -57,6 +57,39 @@
       }
     }
   }
+ 
+  // 规格参数
+  #item2{
+    ul{
+      @include ul-reset();
+      padding: 5px 5px 0 5px;
+      li{
+        background: #efeff4;
+        .attrs-title{
+          color: #333333;
+          padding: 5px;
+          >span{
+            display: block;
+            padding: 5px 0;
+            border-bottom: 1px solid #000;
+          }
+        }
+        .attrs-content{
+          font-size: 12px;
+          color: #6d6d72;
+          display: flex;
+          span:nth-child(1){
+            padding: 5px;
+            flex: 2;
+          }
+          span:nth-child(2){
+            padding: 5px;
+            flex: 4;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* 底部 */

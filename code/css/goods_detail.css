@@ -152,6 +152,50 @@ footer a .fa {
   color: #666666;
 }
 
+.pyg-views #item2 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding: 5px 5px 0 5px;
+}
+
+.pyg-views #item2 ul li {
+  background: #efeff4;
+}
+
+.pyg-views #item2 ul li .attrs-title {
+  color: #333333;
+  padding: 5px;
+}
+
+.pyg-views #item2 ul li .attrs-title > span {
+  display: block;
+  padding: 5px 0;
+  border-bottom: 1px solid #000;
+}
+
+.pyg-views #item2 ul li .attrs-content {
+  font-size: 12px;
+  color: #6d6d72;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg-views #item2 ul li .attrs-content span:nth-child(1) {
+  padding: 5px;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.pyg-views #item2 ul li .attrs-content span:nth-child(2) {
+  padding: 5px;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
 /* 底部 */
 footer {
   display: -webkit-box;

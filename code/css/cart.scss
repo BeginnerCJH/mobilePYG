@@ -1,0 +1,124 @@
+@import "_common.scss";
+@mixin title() {
+        color: #666666;
+        font-size: 14px;
+        padding: 3px 0;
+  
+}
+header{
+ padding: 0;
+ #btn-del{
+   display: none;
+ }
+}
+.pyg-views{
+    padding: 40px 10px 10px;
+    // 配送地址
+    .shipping-address{
+      margin-bottom: 30px;
+      .address-title{
+        @include title();
+      }
+      .address-content{
+        background: #fff;
+        padding: 10px 20px 10px 50px;
+        position: relative;
+        .con-title{
+
+        }
+        .con-detail{
+          color: #8f8f94;
+          font-size: 14px;
+        }
+        .location{
+          position: absolute;
+          top: 18px;
+          left: 16px;
+        }
+        .arrowright{
+          position: absolute;
+          top: 24px;
+          right: 14px;
+          font-size: 16px;
+          color: #bdcade;
+        }
+      }
+
+    }
+    // 生成订单
+    .order{
+      margin-bottom: 30px;
+      .order-title{
+        @include title();
+      }
+      .order-content{
+        display: flex;
+        padding: 10px 12px;
+        background: #fff;
+        justify-content: space-between;
+        align-items: center;
+        .order-price{}
+        .generate-order{
+          .arrowright{
+            font-size: 16px;
+            color: #bdcade;
+          }
+        }
+      }
+    }
+    // 订单列表
+    .order-list{
+      .list-title{
+        @include title();
+      }
+      .list-content{
+        ul{
+          @include ul-reset;
+          li{
+            background: #fff;
+            display: flex;
+            padding: 10px;
+            .goods-options{
+              flex: 1;
+              display: none;
+              .mui-checkbox{
+                padding: 24px;
+                input{
+                  // margin-top: 18px;
+                  top:22px;
+                  left: auto;
+                }
+              }
+            }
+            .goods-img{
+              flex: 2;
+              img{
+                width: 70%;
+                margin: 0 auto;
+              }
+            }
+            .goods-right{
+              flex: 4;
+              .goods-describe{
+                color: #8f8fb0;
+                font-size: 14px;
+              }
+              .goods-hybrid{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 8px;
+                .goods-price{
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .mui-numbox{
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}

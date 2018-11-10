@@ -1,0 +1,22 @@
+@import "_common.scss";
+// 主体内容
+.pyg-views{
+   padding: 22px 10px 10px;
+  .logo{
+    height: 180px;
+    background: #fff url("../static/images/aaa.png") center center no-repeat;
+    background-size: 180px 180px;
+  }
+  form{}
+  .btn{
+    margin-top: 20px;
+    a{
+      display: block;
+      padding: 10px;
+      font-size: 18px;
+    }
+    #btn-login{
+      margin-bottom: 10px;
+    }
+  }
+}

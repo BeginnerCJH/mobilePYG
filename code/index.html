@@ -50,7 +50,7 @@
       <div class="fa fa-list-ul"></div>
       <div>分类</div>
     </a>
-    <a href="javascript:;">
+    <a href="./pages/cart.html">
       <div class="fa fa-shopping-cart"></div>
       <div>购物车</div>
     </a>
@@ -109,7 +109,7 @@
           {{each val.goods val2 index2}}
           <li>
             <!-- 商品详情 -->
-            <a class="commodity-details" href="javascript:;">
+            <a class="commodity-details" href="./pages/goods_detail.html?goods_id={{val2.goods_id}}">
               <!-- 商品图片 -->
               <img src="{{val2.goods_small_logo}}" alt="">
               <!-- 商品描述 -->
@@ -120,7 +120,7 @@
               <div class="commodity-price">￥{{val2.goods_price}}</div>
             </a>
             <!-- 找相似 -->
-            <a class="commodity-like mui-btn mui-btn-primary mui-btn-outlined" data-loading-text="查找中" href="javascript:;">找相似</a>
+            <a class="commodity-like mui-btn mui-btn-primary mui-btn-outlined" data-loading-text="查找中" href="./pages/good_list.html?cid={{val2.cat_id}}">找相似</a>
           </li>
           {{/each}}
         </ul>

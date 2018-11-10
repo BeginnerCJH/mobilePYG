@@ -1,0 +1,257 @@
+@charset "UTF-8";
+/* 公共样式 */
+html, body {
+  height: 100%;
+}
+
+body {
+  padding: 45px 0px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 封装重置ul的样式 */
+/* 头部 */
+header {
+  height: 45px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 5px 10px;
+}
+
+/* 主体 */
+.pyg-views {
+  height: 100%;
+  overflow: scroll;
+}
+
+/* 底部 */
+footer {
+  height: 45px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px 0;
+  border-top: 1px solid #ccc;
+}
+
+footer a {
+  color: #000000;
+  display: block;
+  text-align: center;
+}
+
+footer a div {
+  font-size: 12px;
+}
+
+footer a .fa {
+  font-size: 20px;
+}
+
+/* 正在等待的样式 */
+.loadding::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: .5;
+  content: "";
+  z-index: 100;
+}
+
+.loadding::after {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 60px;
+  content: "\f110";
+  z-index: 101;
+  -webkit-animation: fa-spin 1s infinite linear;
+          animation: fa-spin 1s infinite linear;
+  position: fixed;
+  color: pink;
+  top: 40%;
+  left: 50%;
+  margin-left: -30px;
+}
+
+/* 选中按钮的颜色 */
+.mui-text-primary {
+  color: #007aff;
+}
+
+header {
+  padding: 0;
+}
+
+header #btn-del {
+  display: none;
+}
+
+.pyg-views {
+  padding: 40px 10px 10px;
+}
+
+.pyg-views .shipping-address {
+  margin-bottom: 30px;
+}
+
+.pyg-views .shipping-address .address-title {
+  color: #666666;
+  font-size: 14px;
+  padding: 3px 0;
+}
+
+.pyg-views .shipping-address .address-content {
+  background: #fff;
+  padding: 10px 20px 10px 50px;
+  position: relative;
+}
+
+.pyg-views .shipping-address .address-content .con-detail {
+  color: #8f8f94;
+  font-size: 14px;
+}
+
+.pyg-views .shipping-address .address-content .location {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+}
+
+.pyg-views .shipping-address .address-content .arrowright {
+  position: absolute;
+  top: 24px;
+  right: 14px;
+  font-size: 16px;
+  color: #bdcade;
+}
+
+.pyg-views .order {
+  margin-bottom: 30px;
+}
+
+.pyg-views .order .order-title {
+  color: #666666;
+  font-size: 14px;
+  padding: 3px 0;
+}
+
+.pyg-views .order .order-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 12px;
+  background: #fff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pyg-views .order .order-content .generate-order .arrowright {
+  font-size: 16px;
+  color: #bdcade;
+}
+
+.pyg-views .order-list .list-title {
+  color: #666666;
+  font-size: 14px;
+  padding: 3px 0;
+}
+
+.pyg-views .order-list .list-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pyg-views .order-list .list-content ul li {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.pyg-views .order-list .list-content ul li .goods-options {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: none;
+}
+
+.pyg-views .order-list .list-content ul li .goods-options .mui-checkbox {
+  padding: 24px;
+}
+
+.pyg-views .order-list .list-content ul li .goods-options .mui-checkbox input {
+  top: 22px;
+  left: auto;
+}
+
+.pyg-views .order-list .list-content ul li .goods-img {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.pyg-views .order-list .list-content ul li .goods-img img {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.pyg-views .order-list .list-content ul li .goods-right {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.pyg-views .order-list .list-content ul li .goods-right .goods-describe {
+  color: #8f8fb0;
+  font-size: 14px;
+}
+
+.pyg-views .order-list .list-content ul li .goods-right .goods-hybrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 8px;
+}
+
+.pyg-views .order-list .list-content ul li .goods-right .goods-hybrid .goods-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pyg-views .order-list .list-content ul li .goods-right .goods-hybrid .mui-numbox {
+  display: none;
+}
+/*# sourceMappingURL=cart.css.map */

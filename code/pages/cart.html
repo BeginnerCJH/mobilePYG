@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>购物车之洗洗睡吧的高薪</title>
+  <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/cart.css">
+
+</head>
+
+<body>
+  <!-- 头部 -->
+    <header id="header" class="mui-bar mui-bar-nav">
+      <h1 class="mui-title">购物车</h1>
+      <button id="btn-edit" class="mui-btn mui-btn-primary mui-btn-outlined mui-pull-right">编辑</button>
+      <button id="btn-del" class="mui-btn mui-btn-primary mui-btn-outlined mui-pull-left">删除</button>
+    </header>
+
+  <!-- 主体内容 -->
+  <div class="pyg-views">
+    <!-- 配送地址 -->
+      <div class="shipping-address">
+        <div class="address-title">
+          配送地址
+        </div>
+        <div class="address-content">
+          <span class="mui-icon location mui-icon-location"></span>
+          <span class="mui-icon arrowright mui-icon-arrowright"></span>
+            <div class="con-title">
+              默认地址
+            </div>
+            <div class="con-detail">
+              北凉道凉州清凉山
+            </div>
+           
+        </div>
+      </div>
+      <!-- 生成订单 -->
+      <div class="order">
+        <div class="order-title">
+          生成订单
+        </div>
+        <div class="order-content">
+            <div class="order-price">
+              <span>总价：</span>
+              <span>￥4699</span>
+            </div>
+            <div class="generate-order">
+              <span>生成订单</span>
+              <span class="mui-icon arrowright mui-icon-arrowright"></span>
+            </div>
+        </div>
+      </div>
+
+      <!-- 订单列表 -->
+      <div class="order-list">
+        <div class="list-title">
+          订单列表
+        </div>
+        <div class="list-content">
+          <ul>
+            <li>
+              <div class="goods-options">
+                <div class="mui-input-row mui-checkbox mui-left">
+                  <input name="checkbox1" value="Item 1" type="checkbox">
+                </div>
+              </div>
+              <div class="goods-img">
+                <img src="http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000145931214_1_400x400.jpg" alt="">
+              </div>
+              <div class="goods-right">
+                  <div class="goods-describe">
+                    AK47男人鸡尾酒 蓝莓味 5° 275ml 果酒 预调酒
+                  </div>
+                  <div class="goods-hybrid">
+                      <div class="goods-price">
+                        ￥0
+                      </div>
+                      <div class="goods-num">
+                        <div class="mui-numbox">
+                          <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+                          <input class="mui-input-numbox" type="number">
+                          <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </li>
+
+           
+
+          
+          </ul>
+        </div>
+      </div>
+  </div>
+
+  <!-- 底部 -->
+  <footer>
+    <a href="../index.html">
+      <div class="fa fa-home"></div>
+      <div>首页</div>
+    </a>
+    <a href="./category.html">
+      <div class="fa fa-list-ul"></div>
+      <div>分类</div>
+    </a>
+    <a href="./cart.html" class="mui-text-primary">
+      <div class="fa fa-shopping-cart"></div>
+      <div>购物车</div>
+    </a>
+    <a href="javascript:;">
+      <div class="fa fa-user-circle-o"></div>
+      <div>我的</div>
+    </a>
+  </footer>
+</body>
+
+
+
+
+
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/cart.js"></script>
+
+</html>

@@ -37,8 +37,8 @@
       <span class="mui-icon mui-icon-download"></span>
       <span>下载</span>
     </a>
-    <a href="javascript:;">立即购买</a>
-    <a href="javascript:;">加入购物车</a>
+    <a class="mui-btn-warning" href="javascript:;">立即购买</a>
+    <a id="add-cart" class="mui-btn-danger" href="javascript:;">加入购物车</a>
   </footer>
 
 </body>
@@ -100,7 +100,6 @@
 
     <!-- 商品选项卡 -->
     <div class="goods_tab">
-      <div style="padding: 10px 10px;">
 				<div id="segmentedControl" class="mui-segmented-control">
 					<a class="mui-control-item mui-active" href="#item1">
 				图文详情
@@ -118,16 +117,23 @@
         </div>
         <!-- 规格参数-->
          <div id="item2" class="mui-control-content">
-          {{each res.attrs val2 index2}}
-            <div class="zhuti">
-              {{val2.attr_name}}
-            </div>
-            <div class="guige">
-              {{val2.attr_value}}
-            </div>
-          {{/each}}
+          
+            <ul>
+              {{each res.attrs val2 index2}}
+              <li>
+                <div class="attrs-title">
+                  <span>{{val2.attr_name.split("-")[0]}}</span>
+                </div>
+                <div class="attrs-content">
+                  <span>{{val2.attr_name.split("-")[1]}}</span>
+                  <span>{{val2.attr_value}}</span>
+                </div>
+              </li>
+              {{/each}}
+            </ul>
+          
 				</div>
-      </div>
+     
     </div>
 </script>
 

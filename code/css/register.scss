@@ -1,0 +1,43 @@
+@import "_common.scss";
+// 主题内容
+.pyg-views{
+  padding: 22px 10px 10px;
+  position: relative;
+  .logo{
+    height: 180px;
+    background: #fff url("../static/images/aaa.png") center center no-repeat;
+    background-size: 180px 180px;
+    span{
+      position: absolute;
+      top: 0;
+      right: 10px;
+      color: #999;
+    }
+  }
+  form{
+    label{
+      font-size: 15px;
+    }
+    input{
+      font-size: 14px;
+    }
+    .form-code{
+      position: relative;
+      button{
+        width: auto;
+        position: absolute;
+        right: 4px;
+        top: 6px;
+        padding: 5px;
+      }
+    }
+  }
+  .btn{
+    margin-top: 10px;
+    a{
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+    }
+  }
+}

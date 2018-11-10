@@ -11,6 +11,8 @@ $(function () {
     btnJiaZai();
     /* 请求首页商品的数据 */
     getGoodslist();
+    /* 注册一大推事件 */
+    eventList();
     
   }
  
@@ -82,12 +84,24 @@ $(function () {
     });
   }
 
-  /* 点击跳转页面 */
-  $("footer a:nth-child(2)").on("tap", function () {
-    var href=this.href;
-    location.href = href;
-
-  })
+  function eventList() {
+    /* 点击跳转页面 */
+    $("footer a:nth-child(2)").on("tap", function () {
+      var href = this.href;
+      location.href = href;
+    })
+    $("footer a:nth-child(3)").on("tap", function () {
+      var href = this.href;
+      location.href = href;
+    })
+    // 点击跳转详情页
+    $(".commodity-list").on("tap","a",function () {
+      var href = this.href;
+      location.href = href;
+      console.log('aaa');
+    })
+    
+  }
 
  
 

@@ -2,7 +2,7 @@ $(function () {
   /* 准备发送请求的数据 */
   var requestGoodsData = {
     query: "",
-    cid: utilsCode.parameter(location.search).cid,
+    cid: $.getUrlParameter("cid"),
     pagenum: 1,//默认加载第一页数据
     pagesize: 10//页容器
   }
