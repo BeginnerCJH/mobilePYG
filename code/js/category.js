@@ -46,7 +46,8 @@ $(function () {
   // 如果有本地缓存 再判断是否过期
   function catesRender() {
     // 获取本地缓存的数据
-    var cateDataStr=localStorage.getItem("cates");
+    // var cateDataStr=localStorage.getItem("cates");
+    var cateDataStr=$.getLocalCache("cates");;
     // 判断是否存在本地缓存---不存在--直接到服务器请求数据
     if (!cateDataStr){
       getCategories();
@@ -78,11 +79,12 @@ $(function () {
         /* 把数据存储到全局变量中 */
         categoryData = res.data;
         /* 把请求回来的数据存储到本地缓存中 再存储本地存储的时间 */
-        localStorage.setItem("cates", JSON.stringify({ 
-          time: Date.now(), 
-          data: categoryData
-        })
-        );
+        // localStorage.setItem("cates", JSON.stringify({ 
+        //   time: Date.now(), 
+        //   data: categoryData
+        // })
+        // );
+        $.setLocalCache("cates",categoryData);
         /* 渲染左边内容的数据 */
         leftRender();
         /* 渲染右边内容的数据 */
@@ -118,6 +120,12 @@ $(function () {
     });
     
   }
+
   
+  // 点击跳转商品列表
+  $("input[type='search']").on("focus", function () {
+    // 跳转到商品列表
+    location.href = "./good_list.html";
+  })
   
 })

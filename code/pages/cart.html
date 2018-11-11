@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body id="pyg-cart">
   <!-- 头部 -->
     <header id="header" class="mui-bar mui-bar-nav">
       <h1 class="mui-title">购物车</h1>
@@ -46,13 +46,13 @@
         </div>
         <div class="order-content">
             <div class="order-price">
-              <span>总价：</span>
-              <span>￥4699</span>
+              <span>总价：￥</span>
+              <span class="total-price">0</span>
             </div>
-            <div class="generate-order">
+            <a href="javascript:;" class="generate-order">
               <span>生成订单</span>
               <span class="mui-icon arrowright mui-icon-arrowright"></span>
-            </div>
+            </a>
         </div>
       </div>
 
@@ -62,38 +62,8 @@
           订单列表
         </div>
         <div class="list-content">
-          <ul>
-            <li>
-              <div class="goods-options">
-                <div class="mui-input-row mui-checkbox mui-left">
-                  <input name="checkbox1" value="Item 1" type="checkbox">
-                </div>
-              </div>
-              <div class="goods-img">
-                <img src="http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000145931214_1_400x400.jpg" alt="">
-              </div>
-              <div class="goods-right">
-                  <div class="goods-describe">
-                    AK47男人鸡尾酒 蓝莓味 5° 275ml 果酒 预调酒
-                  </div>
-                  <div class="goods-hybrid">
-                      <div class="goods-price">
-                        ￥0
-                      </div>
-                      <div class="goods-num">
-                        <div class="mui-numbox">
-                          <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
-                          <input class="mui-input-numbox" type="number">
-                          <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-            </li>
-
-           
-
-          
+          <ul class="ul-details">
+                
           </ul>
         </div>
       </div>
@@ -113,13 +83,47 @@
       <div class="fa fa-shopping-cart"></div>
       <div>购物车</div>
     </a>
-    <a href="javascript:;">
+    <a href="./me.html">
       <div class="fa fa-user-circle-o"></div>
       <div>我的</div>
     </a>
   </footer>
 </body>
-
+<!-- 模板 -->
+<script type="text/template" id="orderListTemp">
+  {{each data val index}}
+     <li data-obj="{{val}}">
+              <div class="goods-options">
+                <div class="mui-input-row mui-checkbox mui-left">
+                  <input name="checkbox" value="Item1" type="checkbox">
+                </div>
+              </div>
+              <a href="./goods_detail.html?goods_id={{val.goods_id}}" class="goods-img">
+                <img src="{{val.goods_small_logo}}" alt="">
+              </a>
+              <div class="goods-right">
+                  <div class="goods-describe mui-ellipsis-2">
+                    {{val.goods_name}}
+                  </div>
+                  <div class="goods-hybrid">
+                      <div class="goods-price">
+                        ￥{{val.goods_price}}
+                      </div>
+                      <div class="goods-num">
+                        <div class="goods-num2">
+                          x{{val.amount}}
+                        </div>
+                        <div class="mui-numbox" data-numbox-min='1' data-numbox-max='{{val.goods_number}}'>
+                          <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+                          <input class="mui-input-numbox" type="number" value="{{val.amount}}">
+                          <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </li>
+  {{/each}}
+</script>
 
 
 

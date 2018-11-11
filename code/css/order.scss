@@ -1,0 +1,41 @@
+@import "_common.scss";
+header{
+  padding: 0;
+}
+.pyg-views{}
+#segmentedControl{
+  background: #fff;
+}
+.tab-conten{
+  padding: 20px;
+  ul{
+    @include ul-reset();
+    li{
+      background: #fff;
+      padding: 20px 10px 0 15px;
+      a{
+        display: block;
+        border-bottom: 1px solid #dadadd;
+        padding-bottom: 20px;
+        color: #000;
+        display: flex;
+        .oreder-number{
+          flex: 5;
+          overflow: hidden;
+        }
+        .oreder-price{
+          flex: 2;
+          overflow: hidden;
+          color: red;
+          text-align: center;
+        }
+      }
+      &:last-child a{
+        border: none;
+      }
+    }
+  }
+}
+body{
+  display: none;
+}

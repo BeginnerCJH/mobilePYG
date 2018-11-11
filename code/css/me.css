@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* 公共样式 */
+html, body {
+  height: 100%;
+}
+
+body {
+  padding: 45px 0px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 封装重置ul的样式 */
+/* 头部 */
+header {
+  height: 45px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 5px 10px;
+}
+
+/* 主体 */
+.pyg-views {
+  height: 100%;
+  overflow: scroll;
+}
+
+/* 底部 */
+footer {
+  height: 45px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px 0;
+  border-top: 1px solid #ccc;
+}
+
+footer a {
+  color: #000000;
+  display: block;
+  text-align: center;
+}
+
+footer a div {
+  font-size: 12px;
+}
+
+footer a .fa {
+  font-size: 20px;
+}
+
+/* 正在等待的样式 */
+.loadding::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: .5;
+  content: "";
+  z-index: 100;
+}
+
+.loadding::after {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 60px;
+  content: "\f110";
+  z-index: 101;
+  -webkit-animation: fa-spin 1s infinite linear;
+          animation: fa-spin 1s infinite linear;
+  position: fixed;
+  color: pink;
+  top: 40%;
+  left: 50%;
+  margin-left: -30px;
+}
+
+/* 选中按钮的颜色 */
+.mui-text-primary {
+  color: #007aff;
+}
+
+header {
+  padding: 0;
+}
+
+.pyg-views {
+  padding: 20px 10px;
+}
+
+.pyg-views .user-box {
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.pyg-views .user-box .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 12px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#007aff), to(#007aff4f));
+  background-image: linear-gradient(to right, #007aff, #007aff4f);
+}
+
+.pyg-views .user-box .user .user-img {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  overflow: hidden;
+}
+
+.pyg-views .user-box .user .user-info {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  overflow: hidden;
+  padding-left: 20px;
+  margin: auto 0;
+}
+
+.pyg-views .user-box .user .user-info .user-name {
+  color: #fff;
+}
+
+.pyg-views .user-box .user .user-info .user-email {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.pyg-views .order-manager {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  padding: 10px 20px;
+}
+
+.pyg-views .order-manager a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.pyg-views .order-manager a span {
+  font-size: 12px;
+  color: #666666;
+}
+
+.pyg-views .order-manager a .fa {
+  font-size: 22px;
+  color: #007aff;
+  padding-bottom: 5px;
+}
+
+.pyg-views .logout a {
+  display: block;
+  padding: 16px;
+  font-size: 18px;
+}
+
+body {
+  display: none;
+}
+/*# sourceMappingURL=me.css.map */

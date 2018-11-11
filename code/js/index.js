@@ -94,11 +94,20 @@ $(function () {
       var href = this.href;
       location.href = href;
     })
+    $("footer a:nth-child(4)").on("tap", function () {
+      var href = this.href;
+      location.href = href;
+    })
     // 点击跳转详情页
     $(".commodity-list").on("tap","a",function () {
       var href = this.href;
       location.href = href;
       console.log('aaa');
+    })
+
+    $("input[type='search']").on("focus",function () {
+      // 跳转到商品列表
+      location.href ="./pages/good_list.html";
     })
     
   }

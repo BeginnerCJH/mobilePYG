@@ -43,17 +43,18 @@ $(function () {
     $("#add-cart").on("tap", function () {
       // 点击加入购物车 判断用户是否已经登录
       // 获取之前存储的用户信息
-      var userInfo = sessionStorage.getItem("userInfo")
+      // var userInfo = sessionStorage.getItem("userInfo");
       // 判断是否登录 如果没有登录
-      if (!userInfo){
+      if (!$.isLogin()){
         // 存储当前的地址
-        sessionStorage.setItem("detailUrl", location.href);
+        // sessionStorage.setItem("detailUrl", location.href);
+        $.setPageUrl();
         // 提示用户重新登录
         mui.toast("请重新登录");
         // 两秒后跳转登录界面
         setTimeout(function () {
           location.href = "../pages/login.html";
-        }, 2000);
+        }, 1000);
       }else{
         // console.log('已经登录，可以为所欲为了');
         // 准备加入购物车的数据
@@ -67,11 +68,13 @@ $(function () {
           goods_small_logo:detailData.goods_small_logo,
           goods_weight:detailData.goods_weight
         }
+
+        // 把购物车的数据对象转换成json字符串
+        var addCartDataStr = JSON.stringify(addCartData)
         // 获取存储用户信息中token 也就是登录凭证 
         // 先把json字符串转成对象
-        var token = JSON.parse(sessionStorage.getItem("userInfo")).token;
-        // 把对象转换成json字符串
-        var addCartDataStr=JSON.stringify(addCartData)
+        var token = $.getUserInfo().token;
+       
         // 发送请求 只能用ajax请求 因为登录认证的模式是才有jwt
         // 在访问有限的路径必须把token放在http的头
         $.ajax({

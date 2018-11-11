@@ -98,12 +98,8 @@ header {
   padding: 0;
 }
 
-header #btn-del {
-  display: none;
-}
-
 .pyg-views {
-  padding: 40px 10px 10px;
+  padding: 10px;
 }
 
 .pyg-views .shipping-address {
@@ -165,6 +161,15 @@ header #btn-del {
           align-items: center;
 }
 
+.pyg-views .order .order-content .order-price span:nth-child(2) {
+  color: red;
+}
+
+.pyg-views .order .order-content .generate-order {
+  display: block;
+  color: #000;
+}
+
 .pyg-views .order .order-content .generate-order .arrowright {
   font-size: 16px;
   color: #bdcade;
@@ -194,19 +199,24 @@ header #btn-del {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  display: none;
-}
-
-.pyg-views .order-list .list-content ul li .goods-options .mui-checkbox {
-  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .pyg-views .order-list .list-content ul li .goods-options .mui-checkbox input {
-  top: 22px;
-  left: auto;
+  position: static;
 }
 
 .pyg-views .order-list .list-content ul li .goods-img {
+  display: block;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -251,7 +261,33 @@ header #btn-del {
           justify-content: center;
 }
 
-.pyg-views .order-list .list-content ul li .goods-right .goods-hybrid .mui-numbox {
+.pyg-views .order-list .list-content ul li .goods-right .goods-hybrid .goods-num2 {
+  color: #007aff;
+}
+
+body {
+  display: none;
+}
+
+#pyg-cart #btn-del, #pyg-cart .goods-options, #pyg-cart .mui-numbox {
+  display: none;
+}
+
+#pyg-cart .goods-num2 {
+  display: block;
+}
+
+#pyg-cart.edit-cart #btn-del, #pyg-cart.edit-cart .mui-numbox {
+  display: block;
+}
+
+#pyg-cart.edit-cart .goods-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#pyg-cart.edit-cart .goods-num2 {
   display: none;
 }
 /*# sourceMappingURL=cart.css.map */

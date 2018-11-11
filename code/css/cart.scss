@@ -7,12 +7,10 @@
 }
 header{
  padding: 0;
- #btn-del{
-   display: none;
- }
+
 }
 .pyg-views{
-    padding: 40px 10px 10px;
+    padding: 10px;
     // 配送地址
     .shipping-address{
       margin-bottom: 30px;
@@ -57,8 +55,14 @@ header{
         background: #fff;
         justify-content: space-between;
         align-items: center;
-        .order-price{}
+        .order-price{
+          span:nth-child(2){
+            color: red;
+          }
+        }
         .generate-order{
+          display: block;
+          color: #000;
           .arrowright{
             font-size: 16px;
             color: #bdcade;
@@ -80,17 +84,17 @@ header{
             padding: 10px;
             .goods-options{
               flex: 1;
-              display: none;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
               .mui-checkbox{
-                padding: 24px;
                 input{
-                  // margin-top: 18px;
-                  top:22px;
-                  left: auto;
+                  position: static;
                 }
               }
             }
             .goods-img{
+              display: block;
               flex: 2;
               img{
                 width: 70%;
@@ -113,7 +117,9 @@ header{
                   justify-content: center;
                 }
                 .mui-numbox{
-                  display: none;
+                }
+                .goods-num2{
+                  color: #007aff;
                 }
               }
             }
@@ -121,4 +127,29 @@ header{
         }
       }
     }
+}
+
+body{
+  display: none;
+}
+// 
+#pyg-cart {
+  #btn-del,.goods-options,.mui-numbox{
+     display: none;
+  }
+  .goods-num2{
+    display: block;
+  }
+}
+// 编辑样式
+#pyg-cart.edit-cart{
+  #btn-del,.mui-numbox{
+     display: block;
+  }
+  .goods-options{
+     display: flex;
+  }
+  .goods-num2{
+    display: none;
+  }
 }

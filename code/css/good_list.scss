@@ -12,7 +12,7 @@ body{
   left: 0;
   display: flex;
   padding: 3px 12px;
-  .fa-refresh{
+  .fa-undo{
     display: block;
     width: 20px;
     line-height: 45px;
@@ -106,3 +106,42 @@ body{
     }
   }
 }
+
+// 历史记录
+.history{
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+  display: none;
+  padding: 10px;
+  a{
+    color: #666666;
+    border: 1px solid #cccccc;
+    font-size: 12px;
+    border-radius: 12px;
+    padding: 3px;
+  }
+}
+
+// 建议搜索列表
+.searchList{
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+  display: none;
+  padding: 10px;
+  ul{
+    @include ul-reset();
+    padding: 5px;
+    li{
+      border-bottom: 1px solid #cccccc;
+      padding: 8px 0;
+      a{
+        display: block;
+        color: #666666;
+
+      }
+    }
+  }
+}
+

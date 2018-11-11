@@ -15,12 +15,13 @@
 <body>
   <!-- 头部 -->
   <div class="good-list-header">
-      <a href="javascript:;" class="fa fa-refresh"></a>
+      <a href="javascript:;" class="fa fa-undo cancel_search"></a>
       <div class="search">
         <input type="search" placeholder="请输入内容">
       </div>
       <a href="javascript:;" class="btn-search">搜索</a>
   </div>
+  <!-- 导航栏 -->
   <div class="good-list-nav">
     <a href="javascript:;" class="gl-select">
       综合
@@ -36,16 +37,29 @@
 
   <!-- 主体内容 -->
   <!-- pyg-views为下拉-上拉的容器 里面必须加一层嵌套 div -->
-  <div class="pyg-views">
-   <!-- 2 div 为额外添加的嵌套 -->
-    <div>
-      <!-- //3 .lt_content 为存放数据的容器 -->
-      <ul class="good-list-main">
-      
-      </ul>
+
+    <div class="pyg-views">
+      <!-- 2 div 为额外添加的嵌套 -->
+      <div>
+        <!-- //3 .lt_content 为存放数据的容器 -->
+        <ul class="good-list-main">
+    
+        </ul>
+      </div>
     </div>
+ 
+
+  <!-- 历史记录 -->
+  <div class="history">
+   
   </div>
 
+  <!-- 建议搜索列表 -->
+  <div class="searchList">
+    <ul class="ul-searchList">
+     
+    </ul>
+  </div>
   <!-- 底部 -->
   <footer>
     <a href="../index.html">
@@ -60,7 +74,7 @@
       <div class="fa fa-shopping-cart"></div>
       <div>购物车</div>
     </a>
-    <a href="javascript:;">
+    <a href="./me.html">
       <div class="fa fa-user-circle-o"></div>
       <div>我的</div>
     </a>
@@ -86,6 +100,24 @@
         </a>
       </li>
   {{/each}}
+</script>
+
+<!-- 历史模板 -->
+<script type="text/template" id="historyTemp">
+{{each data val index}}
+ <a href="javascript:;">{{val}}</a>
+{{/each}}
+</script>
+
+<!-- 搜索列表模板 -->
+<script type="text/template" id="searchListTemp">
+{{each data val index}}
+  <li>
+        <a href="./goods_detail.html?goods_id={{val.goods_id}}" class="mui-ellipsis">
+          {{val.goods_name}}
+        </a>
+      </li>
+{{/each}}
 </script>
 
 

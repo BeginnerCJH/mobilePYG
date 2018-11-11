@@ -36,18 +36,19 @@ $(function () {
       $.post("login",loginData,function (res) {
         if(res.meta.status==200){
           // 存储用户的信息 存储复杂信息之前要转换成字符串
-          sessionStorage.setItem("userInfo", JSON.stringify(res.data))
+          $.setUserInfo(res.data);
             // 提示用户登录成功
           mui.toast(res.meta.msg);
           // 跳转页面 判断如果是其他页跳转过来的 直接跳回之前页面，如果没有就跳转主页
-          var currentUrl = sessionStorage.getItem("detailUrl");
+          // var currentUrl = sessionStorage.getItem("detailUrl");
+          var currentUrl = $.getPageUrl();
           if (!currentUrl){
             // 如果不存在  返回主页
             currentUrl ="../ index.html";
           }
           setTimeout(function () {
             location.href = currentUrl;
-          },2000);
+          },1000);
         }else{
           // 提示用户登录失败
           mui.toast(res.meta.msg);

@@ -112,7 +112,7 @@ body {
   padding: 3px 12px;
 }
 
-.good-list-header .fa-refresh {
+.good-list-header .fa-undo {
   display: block;
   width: 20px;
   line-height: 45px;
@@ -230,5 +230,46 @@ body {
   right: 12px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.history {
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+  display: none;
+  padding: 10px;
+}
+
+.history a {
+  color: #666666;
+  border: 1px solid #cccccc;
+  font-size: 12px;
+  border-radius: 12px;
+  padding: 3px;
+}
+
+.searchList {
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+  display: none;
+  padding: 10px;
+}
+
+.searchList ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding: 5px;
+}
+
+.searchList ul li {
+  border-bottom: 1px solid #cccccc;
+  padding: 8px 0;
+}
+
+.searchList ul li a {
+  display: block;
+  color: #666666;
 }
 /*# sourceMappingURL=good_list.css.map */

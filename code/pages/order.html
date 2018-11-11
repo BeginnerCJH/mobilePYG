@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>订单之黄粱美梦的高薪</title>
+  <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/order.css">
+
+</head>
+
+<body id="pyg-cart">
+  <!-- 头部 -->
+  <header id="header" class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">订单</h1>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  </header>
+
+  <!-- 主体内容 -->
+  <div class="pyg-views">
+    <!-- 订单标题 -->
+      <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
+        <a class="mui-control-item mui-active" href="#item1">
+          全部
+        </a>
+        <a class="mui-control-item" href="#item2">
+          代付款
+        </a>
+        <a class="mui-control-item" href="#item3">
+          待发货
+        </a>
+      </div>
+
+      <!-- 切换内容 -->
+      <div class="tab-conten">
+        <div id="item1" class="mui-control-content mui-active">
+          <ul class="ul-order-del">
+            
+              
+          </ul>
+        </div>
+        <div id="item2" class="mui-control-content">
+          老板跑路，资金不足，开发暂停
+        </div>
+        <div id="item3" class="mui-control-content">
+          尾款没付，项目停止
+        </div>
+      </div>
+  </div>
+
+  <!-- 底部 -->
+  <footer>
+    <a href="../index.html">
+      <div class="fa fa-home"></div>
+      <div>首页</div>
+    </a>
+    <a href="./category.html">
+      <div class="fa fa-list-ul"></div>
+      <div>分类</div>
+    </a>
+    <a href="./cart.html">
+      <div class="fa fa-shopping-cart"></div>
+      <div>购物车</div>
+    </a>
+    <a href="./me.html">
+      <div class="fa fa-user-circle-o"></div>
+      <div>我的</div>
+    </a>
+  </footer>
+</body>
+<!-- 准备模板 -->
+<script type="text/template" id="orderDelTemp">
+  {{each data val index}}
+    <li>
+      <a href="javascript:;">
+        <div class="oreder-number">
+          <div class="number-title">
+            订单编号:
+          </div>
+          <div class="number-de mui-ellipsis">{{val.order_number}}</div>
+        </div>
+        <div class="oreder-price">￥{{val.order_price}}</div>
+      </a>
+    </li>
+  {{/each}}
+
+</script>
+
+
+
+
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/order.js"></script>
+
+</html>
